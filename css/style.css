@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Josefin+Sans:600&display=swap');
+
+
+
+/* Global Styling */
+a,
+a:hover,
+a:visited,
+a:link
+{
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    width: auto;
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    background-color: 	#F0FFFF;
+    font-weight: 400;
+    font-size: 22px;
+    box-sizing: border-box;
+}
+
+.container {
+	max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 5px;
+}
+.container_2{
+    max-width: 70%;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+/*------------------------------------
+    Header and Nav
+-------------------------------------*/
+#main-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+}
+
+#main-menu li{
+   list-style: none;
+   padding: 10px;
+}
+#main-menu li >a:hover{
+  color:  rgb(77, 131, 206);;
+  border-bottom: ridge;
+}
+
+#main-menu li.active a{
+  color:  rgb(77, 131, 206);;
+  border-bottom: ridge;
+}
+
+.hero-img{
+    margin-top: 8%;
+}
+.hero-img img{
+    display: block;
+    margin: 0 auto;
+}
+#cover{
+  /* max-width: 250px; */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    padding: 2px;
+    box-sizing: border-box;
+}
+.author-info{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    margin-top: 5%;
+}
+.author-info h1{
+  font-family: 'Amaranth', sans-serif;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+.author-info h3, .author-info h4{
+    font-family: 'Open Sans', sans-serif;
+    color:#666666;
+    font-size: 1.4rem;
+}
+#desc{
+    border-left: 3px dotted #a2b9bc;
+    margin: auto;
+    margin-top: 3%;
+    padding: 7px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color:#111010;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#social-pane{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    padding: 8px;
+}
+#social-pane a{
+    padding: 8px;
+    color: #17355E;
+    font-size: 1.8rem;
+}
+#social-pane a:hover{
+    color: #80ced6;
+}
+
+/*=======================================
+    Skill Section and Tab css code 
+=========================================*/
+#skills{
+    margin-top: 4%;
+}
+.h{
+margin-top: 10px;
+padding-left: 5px;
+text-align: center;
+font-size: 1rem;
+}
+.tabs{
+    border: 0px solid #cccccc;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    font-family: 'Open Sans', sans-serif;
+    max-width: 700px;
+    margin-top: 3%;
+    margin-bottom: 15%;
+  
+}
+.tabs_sideber{
+    flex: 1.7;
+    /* width: 200px; */
+    background: #ffffff;
+    border: 0px solid #ffffff;
+    border-radius: 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+.tabs_button{
+    display: block;
+    padding: 10px;
+    background: #dddddd;
+    border: none;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    font-size: .8rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.tabs_button:active{
+    background: #ffffff;
+}
+.tabs_button:not(:last-of-type){
+    border-bottom: 1px solid #cccccc;
+}
+.tabs_button--active{
+    font-weight: bold;
+    /* border-right: 2px solid #009879; */
+    background: #ffffff;
+}
+.tabs_content{
+    padding: 15px;
+    font-size: 0.6rem;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+}
+.tabs_content--active{
+    display: block;
+    flex: 2;
+}
+.tabs_content > :first-child{
+    margin-top: 0;
+}
+
+.items-body {
+    display: grid;
+    place-items: left;
+    padding: 10px;
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    max-height: 300px;
+  }
+  
+  .items-body-content {
+    padding: 0px;
+    padding-right: 0px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    /* background-color: lightblue; */
+    font-size: .8rem;
+    grid-gap: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    
+  }
+  
+  .items-body-content:hover {
+    border-radius: 15px;
+    border: 1px solid #0B5AA2;
+  }
+  
+  .items-body-content i {
+    align-self: center;
+    font-size: 20px;
+    padding: 8px;
+    color: #0B5AA2;
+    font-weight: bold;
+    animation: icon 1.5s infinite forwards;
+  }
+  
+  @keyframes icon {
+    0%,100%{
+      transform: translate(0px);
+    }
+    50% {
+      transform: translate(3px);
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Project Section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.title_2 h2{
+font-family: 'Raleway', sans-serif;
+text-align: center;
+font-size: 2rem;
+border-bottom: 2px solid black;
+max-width: 400px;
+  margin: 0 auto 1rem auto;
+}
+#projects .project_title{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#projects{
+  margin: 0 auto;
+  margin-top: 2.5%;
+}
+#projects .projects_container{
+    margin: 10px auto;
+    /*width: 100%;*/
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; */
+   /* justify-content: space-between;*/
+    /* flex-flow: row wrap;
+    justify-content: flex-start; */
+    /*flex-basis: 25%;
+flex-grow: 0;*/
+}
+
+#projects .card_container:hover{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#projects .project_title{
+    font-size: 1.5rem;
+    margin-bottom: 1.9%;
+}
+#projects .project_desc{
+    font-size: .9rem;
+    text-align: justify;
+}
+#projects .project_stack{
+    font-size: .9rem;
+  /*  text-align: justify;*/
+}
+#projects .project_footer{
+    /* text-align: center; */
+    font-size: 1.5rem;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+  /*  text-align: justify;*/
+}
+.projectBtn{
+    text-align: center;
+    margin-bottom: 3%;
+}
+#projects .projectBtn_2{
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+#contact{
+    margin: 0 auto;
+    margin-top: 20%;
+   
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 20vh;
+    padding: 0 1rem;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .contact-section-header > h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.8rem;
+  }
+  .contact-section-header > p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+  }
+ #contact .mail_btn{
+    font-family: 'Raleway', sans-serif;
+    width: 30%;
+    font-size: 1.5rem;
+  }
+/*===========================
+    Footer
+===========================*/
+#footer{
+    text-align: center;
+    color: #808080;
+    padding: 0;
+    margin-top: 6%;
+}
+/* #footer_project{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 6%;
+} */
+#footer h6{
+    font-family: 'Open Sans', sans-serif;
+    font-size: .7rem;
+    margin: 0;
+    padding: 0; 
+}
+
+#footer_project{
+    text-align: center;
+    color: #808080;
+    padding: 0;
+    margin-bottom: 6%;
+}
+
+#footer_project h6{
+    font-family: 'Open Sans', sans-serif;
+    font-size: .7rem;
+    margin: 0;
+    padding: 0; 
+}
+#footer_project hr{
+    display: block;
+    background: #000;
+    opacity: 0.2;
+    width: 50%;
+    margin: 0 25% 0 25%;
+    /* border-width: 2px; */
+}
+
+hr{
+    display: block;
+    background: #000;
+    opacity: 0.2;
+    width: 50%;
+    margin: 0 25% 0 25%;
+    /* border-width: 2px; */
+}
+h6{
+    margin: 0;
+    padding: 0; 
+}
+#button_seg{
+    margin: 15%;
+    text-align: center;
+}
+#button_seg .footer_btn{
+ border: none;
+ background: none;
+}
+#button_seg .no_txt{
+    content: none;
+}
+/*-----------------------------------
+  Media Queries
+------------------------------------*/
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    #main-menu{ 
+        margin-top: 5%;
+        font-size: 1.5rem;
+    }
+    #cover{
+        max-width: 300px;
+      }
+    .author-info h1{
+      font-family: 'Amaranth', sans-serif;
+        letter-spacing: 3px;
+        font-size: 4.5rem;
+    }
+    #desc{
+        font-size: 1.5rem;
+        border-left: 2px dotted #a2b9bc;
+        font-weight: 400;
+    }
+    .author-info h3{
+        font-size: 2rem;
+        margin-bottom: 3%;
+    }
+    #social-pane a{
+        font-size: 2.5rem;
+    }
+    .tabs{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 7%;
+        margin-bottom: 15%;
+        flex: 1;
+      
+    }
+    #sidebar{
+        font-size: .5rem;
+    }
+    .items-body {
+        display: grid;
+        place-items: left;
+        padding: 1px;
+        margin: 1px;
+        display: grid;
+        grid-gap: 1px;
+      }
+      
+      .items-body-content {
+          padding: 2px;
+        padding-right: 0px;
+        display: inline-block;
+        grid-template-columns: 1fr 1fr;
+        /* background-color: lightblue; */
+        font-size: 1.8rem;
+        grid-gap: 1px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+        
+      }
+      .items-body-content i {
+        align-self: left;
+        font-size: 1.3rem;
+        padding: 8px;
+        color: #0B5AA2;
+        font-weight: bold;
+        animation: icon 1.5s infinite forwards;
+      }
+      #skill_icon{
+        font-size: 2rem;
+      }
+      .c{
+        font-size: 2rem;
+      }
+
+      .title_2 h2{
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        font-size: 2rem;
+        border-bottom: 2px solid black;
+        max-width: 400px;
+          margin: 0 auto 1rem auto;
+        }
+        #projects .project_title{
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        #projects{
+          margin: 0 auto;
+          margin-top: 2.8%;
+        }
+        #projects .projects_container{
+            margin: 10px auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+           /* justify-content: space-between;*/
+            /* flex-flow: row wrap;
+            justify-content: flex-start; */
+            /*flex-basis: 25%;
+        flex-grow: 0;*/
+        }
+        #projects .card_container{
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #projects .card_container:hover{
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+        
+        #projects .project_title{
+            font-size: 1.5rem;
+            margin-bottom: 1.9%;
+        }
+        #projects .project_desc{
+            font-size: .9rem;
+            text-align: justify;
+        }
+        #projects .project_stack{
+            font-size: .9rem;
+          /*  text-align: justify;*/
+        }
+        #projects .project_footer{
+            /* text-align: center; */
+            font-size: 1.5rem;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+          /*  text-align: justify;*/
+        }
+        .projectBtn{
+            text-align: center;
+            margin-bottom: 7%;
+        }
+        
+    
+  }
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #main-menu{ 
+        margin-top: 5%;
+        font-size: 1.5rem;
+    }
+    #cover{
+        max-width: 300px;
+      }
+    .author-info h1{
+      font-family: 'Amaranth', sans-serif;
+        letter-spacing: 3px;
+        font-size: 7vh;
+    }
+    #desc{
+        font-size: 1.2rem;
+        border-left: 2px dotted #a2b9bc;
+    }
+    .author-info h3{
+        font-size: 3vh;
+        margin-bottom: 3%;
+    }
+    #social-pane a{
+        font-size: 2.5rem;
+    }
+    .tabs{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 7%;
+        margin-bottom: 15%;
+        flex: 1;
+      
+    }
+    #sidebar{
+        font-size: .5rem;
+    }
+    .items-body {
+        display: grid;
+        place-items: left;
+        padding: 1px;
+        margin: 1px;
+        display: grid;
+        grid-gap: 1px;
+      }
+      
+      .items-body-content {
+          padding: 2px;
+        padding-right: 0px;
+        display: inline-block;
+        grid-template-columns: 1fr 1fr;
+        /* background-color: lightblue; */
+        font-size: 1rem;
+        grid-gap: 1px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-family: 'Open Sans', sans-serif;
+        
+      }
+      .items-body-content i {
+        align-self: left;
+        font-size: 1.3rem;
+        padding: 8px;
+        color: #0B5AA2;
+        font-weight: bold;
+        animation: icon 1.5s infinite forwards;
+      }
+      #skill_icon{
+        font-size: 2rem;
+      }
+      .c{
+        font-size: 2rem;
+      }
+
+      .title_2 h2{
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        font-size: 2rem;
+        border-bottom: 2px solid black;
+        max-width: 400px;
+          margin: 0 auto 1rem auto;
+        }
+        #projects .project_title{
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        #projects{
+          margin: 0 auto;
+          margin-top: 2.8%;
+        }
+        #projects .projects_container{
+            margin: 10px auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+           /* justify-content: space-between;*/
+            /* flex-flow: row wrap;
+            justify-content: flex-start; */
+            /*flex-basis: 25%;
+        flex-grow: 0;*/
+        }
+        #projects .card_container{
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #projects .card_container:hover{
+            box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+        }
+        
+        #projects .project_title{
+            font-size: 1.5rem;
+            margin-bottom: 1.9%;
+        }
+        #projects .project_desc{
+            font-size: .9rem;
+            text-align: justify;
+        }
+        #projects .project_stack{
+            font-size: .9rem;
+          /*  text-align: justify;*/
+        }
+        #projects .project_footer{
+            /* text-align: center; */
+            font-size: 1.5rem;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+          /*  text-align: justify;*/
+        }
+        .projectBtn{
+            text-align: center;
+            margin-bottom: 7%;
+        }
+        
+
+}
+
+  /* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    #main-menu{ 
+        font-size: .7rem;
+    }
+    #cover{
+        max-width: 200px;
+      }
+    .author-info h1{
+      font-family: 'Amaranth', sans-serif;
+        letter-spacing: 2px;
+        font-size: 2rem;
+    }
+    #desc{
+        font-size: .8rem;
+        border-left: 2px dotted #a2b9bc;
+    }
+    .author-info h3{
+        font-size: 1rem;
+        margin-bottom: 3%;
+    }
+    #social-pane a{
+        font-size: 1.5rem;
+    }
+    .tabs{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 7%;
+        margin-bottom: 15%;
+        flex: 1;
+      
+    }
+    .items-body {
+        display: grid;
+        place-items: left;
+        padding: 1px;
+        margin: 1px;
+        display: grid;
+        grid-gap: 1px;
+      }
+      
+      .items-body-content {
+        padding: 0;
+        padding-right: 0px;
+        display: inline-block;
+        grid-template-columns: 0.5fr 1fr;
+        /* background-color: lightblue; */
+        font-size: .7rem;
+        grid-gap: 1px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        
+      }
+      .items-body-content i {
+        align-self: left;
+        font-size: .9rem;
+        padding: 4px;
+        color: #0B5AA2;
+        font-weight: bold;
+        animation: icon 1.5s infinite forwards;
+      }
+      #skill_icon{
+        font-size: 1.2rem;
+      }
+      .c{
+        font-size: 1.2rem;
+      }
+
+      .container_2{
+        max-width: 767px;
+        margin-right: 1em;
+        margin-left: 1em;
+         padding-top: 5px;
+     } 
+
+      .title_2 h2{
+        font-family: 'Raleway', sans-serif;
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: 2px solid black;
+        max-width: 300px;
+        margin: 0 auto 1rem auto;
+        }
+        #projects .project_title{
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        #projects{
+          margin: 0 auto;
+          margin-top: 2.8%;
+        }
+        #title_2{
+             width: 100%!important;
+        }
+
+        #projects .card_container{
+            /* max-width: 100%!important; */
+            /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
+        }
+        
+        #projects .project_title{
+            font-size: 1.3rem;
+            margin-bottom: 1.9%;
+        }
+        #projects .project_desc{
+            font-size: .9rem;
+            text-align: justify;
+        }
+        #projects .project_stack{
+            font-size: .7rem;
+          /*  text-align: justify;*/
+        }
+        #projects .project_footer{
+            /* text-align: center; */
+            font-size: .9rem;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+          /*  text-align: justify;*/
+        }
+        .projectBtn{
+            text-align: center;
+            margin-bottom: 7%;
+        }
+        .ui.stackable.cards>.card {
+            display: block!important;
+            max-height: auto!important;
+            margin: 8% auto; 
+            padding: 0!important;
+            width: 100%!important;
+        }
+        #contact{
+            margin: 0 auto;
+            margin-top: 27%;
+           
+        }
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            /* margin-top: 5%; */
+            width: 100%;
+            /* padding: 0 1rem; */
+            font-family: 'Raleway', sans-serif;
+          }
+          
+          .contact-section-header > h2 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.7rem;
+          }
+          .contact-section-header > p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1rem;
+            /* margin: 2rem; */
+          }
+         #contact .mail_btn{
+            font-family: 'Raleway', sans-serif;
+            width: 45%;
+            font-size: .9rem;
+          }
+  }
+    
+
+  /* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    #main-menu{ 
+        font-size: 3vw;
+    }
+    #cover{
+        max-width: 200px;
+      }
+    .author-info h1{
+      font-family: 'Amaranth', sans-serif;
+        letter-spacing: 2px;
+        font-size: 10vh;
+    }
+    .description{
+        font-size: .8rem;
+        border-left: 2px dotted #a2b9bc;
+    }
+    .author-info h3{
+        font-size: 1rem;
+        margin-bottom: 3%;
+    }
+    #social-pane a{
+        font-size: 1.5rem;
+    }
+    .tabs{
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 7%;
+        margin-bottom: 15%;
+        flex: 1;
+      
+    }
+    .items-body {
+        display: grid;
+        place-items: left;
+        padding: 1px;
+        margin: 1px;
+        display: grid;
+        grid-gap: 1px;
+      }
+      
+      .items-body-content {
+          padding: 2px;
+        padding-right: 0px;
+        display: inline-block;
+        grid-template-columns: 0.5fr 1fr;
+        /* background-color: lightblue; */
+        font-size: .9rem;
+        grid-gap: 1px;
+        border: 1px solid transparent;
+        cursor: pointer;
+        
+      }
+      .items-body-content i {
+        align-self: left;
+        font-size: .9rem;
+        padding: 5px;
+        color: #0B5AA2;
+        font-weight: bold;
+        animation: icon 1.5s infinite forwards;
+      }
+      #skill_icon{
+        font-size: 1.5rem;
+      }
+      .c{
+        font-size: 1.5rem;
+      }
+      #contact{
+        margin: 0 auto;
+        margin-top: 12%;
+       
+    }
+    .contact-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        /* margin-top: 5%; */
+        width: 100%;
+        /* padding: 0 1rem; */
+        font-family: 'Raleway', sans-serif;
+      }
+      
+      .contact-section-header > h2 {
+        font-family: 'Raleway', sans-serif;
+        font-size: 2.5rem;
+      }
+      .contact-section-header > p {
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        /* margin: 2rem; */
+      }
+     #contact .mail_btn{
+        font-family: 'Raleway', sans-serif;
+        width: 30%;
+        font-size: .9rem;
+      }
+    
+  }
+
+  @media (min-width: 1024px) and (max-width: 1500px)
+{
+    .container_2{
+        max-width: 80%;
+        margin: 0 auto;
+        padding-top: 5px;
+     } 
+        #projects .card_container{
+            max-width: 100%!important;
+        }
+
+}
