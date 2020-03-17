@@ -432,7 +432,7 @@ h6{
         font-weight: 400;
     }
     .author-info h3{
-        font-size: 2rem;
+        font-size: 1.2rem;
         margin-bottom: 3%;
     }
     #social-pane a{
@@ -714,7 +714,7 @@ h6{
         border-left: 2px dotted #a2b9bc;
     }
     .author-info h3{
-        font-size: 1rem;
+        font-size: .6rem;
         margin-bottom: 3%;
     }
     #social-pane a{
